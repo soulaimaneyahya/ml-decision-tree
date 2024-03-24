@@ -13,6 +13,8 @@ python3 index.py
 - [1] means 'Yes'
 - [0] means 'No'
 
+Learn more: [Machine Learning - Decision Tree](https://engineering.multividas.com/posts/machine-learning-decision-tree)
+
 ----- 
 Need helps? Reach me out
 
