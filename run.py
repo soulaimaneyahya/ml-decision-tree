@@ -8,24 +8,27 @@ def main():
     df = pd.read_csv("./data/data.csv")
 
     # Map categorical variables to numerical values
-    d = {"Female": 0, "Male": 1}
-    df["Gender"] = df["Gender"].map(d)
-    d = {"Yes": 1, "No": 0}
-    df["Purchase"] = df["Purchase"].map(d)
+    d = {'Female': 0, 'Male': 1}
+    df['Gender'] = df['Gender'].map(d)
+    d = {'Yes': 1, 'No': 0}
+    df['Purchase'] = df['Purchase'].map(d)
 
     # Define features and target variable
-    features = ["Age", "Gender", "Income"]
+    features = ['Age', 'Gender', 'Income']
     X = df[features]
-    Y = df["Purchase"]
+    Y = df['Purchase']
 
     # Train Decision Tree Classifier
     dtree = DecisionTreeClassifier()
     dtree = dtree.fit(X, Y)
 
     # Predict
-    prediction = dtree.predict([[30, 1, 50000]])
+    input_data = pd.DataFrame([[50, 1, 50000]], columns=features)
+    prediction = dtree.predict(input_data)
     print("Prediction:", prediction)
 
+    print("[1] means 'Yes'")
+    print("[0] means 'No'")
 
 if __name__ == "__main__":
     main()
