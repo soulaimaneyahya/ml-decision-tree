@@ -1,13 +1,23 @@
 # ML Python Decision Tree - Exercise
 
+Install the required dependencies:
+```sh
+pip install -r requirements.txt
+```
+
 Create dataset:
 ```sh
 python3 dataset.py
 ```
 
+Generate plot tree:
+```sh
+python3 plot_decision_tree.py
+```
+
 Running:
 ```sh
-python3 index.py
+python3 run.py
 ```
 
 - [1] means 'Yes'
